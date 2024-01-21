@@ -1,5 +1,5 @@
 {
-  "name": "gulp",
+  "name": "lemon__course",
   "homepage": "https://IvanLabza.github.io/nameDirectory",
   "version": "1.0.0",
   "description": "gulp-dev",
@@ -40,12 +40,15 @@
     "style-loader": "^3.3.3",
     "webpack-stream": "^7.0.0"
   },
-  "browserslist":[
+  "browserslist": [
     "last 5 version"
   ],
   "babel": {
     "preset": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "swiper": "^11.0.5"
   }
 }

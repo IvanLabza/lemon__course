@@ -33,20 +33,8 @@ gulp.task("scssDev", () => {
   return gulp
     .src("./src/scss/*.scss")
     .pipe(change("./doc/css/"))
-    .pipe(
-      plumber({
-        errorHandler: error({
-          generatedMessage: true,
-          title: "SCSS",
-          message: "Error <%= error.massage %>",
-          sound: false,
-        }),
-      })
-    )
     .pipe(cssMap.init())
-    .pipe(media())
     .pipe(scss())
-    .pipe(cssMap.write())
     .pipe(gulp.dest("./doc/css"));
 });
 
@@ -73,17 +61,6 @@ gulp.task("htmlDev", () => {
     .pipe(gulp.dest("./doc/"));
 });
 
-// gulp.task("pages", (done) => {
-//   pages.publish(
-//     "./doc/",
-//     {
-//       branch: "gh-pages",
-//       repo: "https://github.com/username/repo.git", // Replace with your GitHub repository URL
-//       message: "Deployed to GitHub Pages",
-//     },
-//     done
-//   );
-// });
 
 gulp.task("imgDev", () => {
   return gulp

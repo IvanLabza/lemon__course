@@ -1,7 +1,8 @@
 const config = {
   mode: "production",
   entry: {
-    index: "./src/js/main.js",
+    main: "./src/js/main.js",
+    swiper:"./src/js/swiper.js"
   },
   output: {
     filename: "[name].bundle.js",
