@@ -38,6 +38,7 @@
     "npm": "^9.7.2",
     "sass": "^1.63.4",
     "style-loader": "^3.3.3",
+    "swiper": "^11.0.5",
     "webpack-stream": "^7.0.0"
   },
   "browserslist": [
@@ -47,8 +48,5 @@
     "preset": [
       "@babel/preset-env"
     ]
-  },
-  "dependencies": {
-    "swiper": "^11.0.5"
   }
 }

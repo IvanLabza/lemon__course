@@ -16,8 +16,7 @@ gulp.task(
 gulp.task(
   "docs",
   gulp.series(
-    "cleanDocs",
     gulp.parallel("htmlDocs", "scssDocs", "imgDocs", "jsDocs"),
-    // "pages"
+
   )
 );

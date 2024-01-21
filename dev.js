@@ -29,10 +29,13 @@ const change = require("gulp-changed");
 const media = require("gulp-group-css-media-queries");
 const changed = require("gulp-changed");
 
+const config = require("./webpack.config");
+
 gulp.task("scssDev", () => {
   return gulp
     .src("./src/scss/*.scss")
     .pipe(change("./doc/css/"))
+
     .pipe(cssMap.init())
     .pipe(scss())
     .pipe(gulp.dest("./doc/css"));
@@ -61,7 +64,6 @@ gulp.task("htmlDev", () => {
     .pipe(gulp.dest("./doc/"));
 });
 
-
 gulp.task("imgDev", () => {
   return gulp
     .src("./src/img/**/**")
@@ -84,8 +86,7 @@ gulp.task("jsDev", () => {
         }),
       })
     )
-    .pipe(babel())
-    .pipe(webpack(require("./webpack.config")))
+    .pipe(webpack(config))
     .pipe(gulp.dest("./doc/js"));
 });
 
