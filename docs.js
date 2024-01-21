@@ -54,10 +54,8 @@ gulp.task("scssDocs", () => {
     .pipe(cssMap.init())
     .pipe(autoprefixer())
     .pipe(webpCss())
-    .pipe(media())
     .pipe(scss())
     .pipe(cssMin())
-    .pipe(cssMap.write())
     .pipe(gulp.dest("./docs/css"));
 });
 
