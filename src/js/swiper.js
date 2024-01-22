@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     keyboard: {
       enabled: true,
       onlyOnViewport: true,
-      padeUpDown: true,
+      pageUpDown: true, 
     },
     autoplay: {
       delay: 1070,
       stopOnLastSlide: false,
-      disableOnIteration: false,
+      disableOnInteraction: false, 
     },
     speed: 1000,
 
@@ -27,4 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  swiper.init();
 });
