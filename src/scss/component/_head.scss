@@ -1,9 +1,9 @@
 .head {
-    padding-top: 35px;
-    padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 40px;
   .container {
-      margin: 0 auto;
-      max-width: 1120px;
+    margin: 0 auto;
+    max-width: 1120px;
   }
   .menu-open {
     img {
@@ -26,10 +26,16 @@
     }
   }
   .head__logo {
+    @include mobile{
+      width: 70%;
+    }
   }
   .head__link {
     display: flex;
     gap: 50px;
+    @include tablet {
+      display: none;
+    }
     a {
       color: #001a49;
       font-family: $text-fonts;
@@ -42,14 +48,24 @@
     margin-left: auto;
     align-items: center;
     gap: 50px;
+    @include tablet-small {
+      gap: 22px;
+    }
     a:nth-child(1) {
       color: #001a49;
       font-family: $text-fonts;
       font-size: 16px;
       font-weight: 700;
+      @include tablet-small {
+        font-size: 14px;
+      }
     }
     a:nth-child(2) {
       padding: 15px 30px;
+      @include tablet-small {
+        padding: 14px 20px;
+        font-size: 14px;
+      }
     }
   }
 }

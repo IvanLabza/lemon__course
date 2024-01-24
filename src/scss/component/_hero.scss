@@ -2,6 +2,9 @@
   max-width: 1090px;
   background-color: #e7eaeb;
   border-radius: 0px 20px 20px 0px;
+  @include tablet {
+    padding: 59px 0;
+  }
 
   //   position: relative;
 
@@ -16,6 +19,9 @@
     padding-top: 134px;
     padding-bottom: 109px;
     padding-left: 160px;
+    @include tablet {
+      padding: 0;
+    }
   }
   .hero__title {
     color: $title-color;
@@ -76,6 +82,9 @@
     position: relative;
   }
   .hero__img {
+    @include tablet {
+      display: none;
+    }
     display: flex;
     border-radius: 20px 20px 20px 20px;
     background: #001a49;
@@ -87,7 +96,7 @@
     justify-content: center;
     align-items: center;
     left: 63%;
-    top: 7%;
+    top: 6%;
     img {
       cursor: pointer;
     }
